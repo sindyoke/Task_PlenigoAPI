@@ -40,6 +40,7 @@ public class CsvUtil {
                         item.getInvoiceDate());
             }
             csvPrinter.flush();
+            System.out.println("File orders.csv successfully created.");
         } catch (IOException e) {
             e.printStackTrace();
         }

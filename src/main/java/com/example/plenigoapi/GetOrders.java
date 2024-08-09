@@ -12,8 +12,8 @@ public class GetOrders {
     @Autowired
     private PlenigoApiService plenigoApiService;
 
-    @ShellMethod(key="orders", value="Fetch --count number of orders, get customer and invoice data and create csv file")
-    public void getOrders(@ShellOption(value="--count", defaultValue = "300") int numberOfOrders) {
+    @ShellMethod(key="orders", value="Fetch --n number of orders, get customer and invoice data and create csv file")
+    public void getOrders(@ShellOption(value="--n", defaultValue = "300") int numberOfOrders) {
         plenigoApiService.processOrders(numberOfOrders);
     }
 }
